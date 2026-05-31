@@ -1,0 +1,14 @@
+@layer base {
+  body {
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 20px;
+  }
+}

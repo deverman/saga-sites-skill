@@ -1,0 +1,7 @@
+.build/
+.swiftpm/
+deploy/
+content/static/style.css
+content/static/generated/
+deploy/static/generated/
+.DS_Store

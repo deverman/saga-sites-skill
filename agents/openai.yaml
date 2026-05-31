@@ -1,0 +1,4 @@
+interface:
+  display_name: "Saga Sites"
+  short_description: "Build fast, structured Swift Saga websites."
+  default_prompt: "Create or improve a Swift Saga site with typed content, SEO, Tailwind, audits, and Cloudflare Pages deployment."
