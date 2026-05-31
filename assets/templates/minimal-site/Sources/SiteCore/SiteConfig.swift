@@ -6,4 +6,5 @@ enum SiteConfig {
   static let description = "A Swift Saga site."
   static let url = URL(string: "https://example.com")!
   static let titleSuffix = " - Example Saga Site"
+  static let defaultImage = "https://example.com/static/social-card.jpg"
 }

@@ -54,7 +54,7 @@ Use this skill to operate a Swift Saga website as a coherent system: Saga pipeli
 
 ## Assets And Swift Utilities
 
-- `assets/templates/minimal-site/` is a small Saga starter skeleton to copy when creating a new site.
+- `assets/templates/minimal-site/` is the copyable Saga starter/reference site; read its `TEMPLATE.md` before adapting it.
 - `assets/templates/*/README.md` files describe landing-page, blog, case-study, and WordPress migration starting points.
 - `assets/tools/skill-validator/` is a Swift ArgumentParser replacement for `quick_validate.py`.
 - Deterministic utilities for Saga sites should be implemented as Swift packages or Swift ArgumentParser commands, not Python helper scripts.

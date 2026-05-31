@@ -12,3 +12,31 @@
     padding: 48px 20px;
   }
 }
+
+@layer components {
+  .site-header {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 24px 20px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .site-brand {
+    color: var(--color-ink);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .post-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 20px;
+  }
+
+  .entry-body {
+    line-height: 1.65;
+  }
+}

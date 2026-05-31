@@ -1,5 +1,5 @@
 @import "tailwindcss";
 @import "./tokens.css";
 @import "./base.css";
-@source "../Sources";
-@source "../content";
+@source "../../";
+@source "../../../content";
