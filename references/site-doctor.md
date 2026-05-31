@@ -18,7 +18,10 @@ Use SiteDoctor-style commands for deterministic, reviewable maintenance.
 - descriptions
 - tags/categories
 - image coverage
+- generated CSS status
+- feed and sitemap smoke checks
 - thin content
+- deployed payload and image weight
 - generated output smoke checks
 - migration redirect gaps
 
@@ -42,3 +45,5 @@ produce the same proposal shape.
 - Use Swift ArgumentParser.
 - Require explicit flags such as `--report`, `--generate`, or `--apply-approved`
   for actions with side effects.
+- Keep slow, network-heavy, or model-assisted checks out of normal `saga build`;
+  expose them as explicit doctor commands or scheduled CI.

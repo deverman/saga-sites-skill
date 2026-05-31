@@ -12,6 +12,8 @@ Extract packages only when the boundary is stable and useful across multiple sit
 - `SagaImagePipeline`: rendered-HTML image enhancement and deterministic derivatives.
 - `SagaCloudflareDeploy`: generic Cloudflare Pages Direct Upload CLI helpers.
 - `SagaBuildMetrics`: writer timing wrappers, counters, and JSON metrics reports.
+- `SagaRecommendations`: deterministic related-content data and fixed CTA
+  catalog validation. Keep any model reranking outside `saga build`.
 
 ## Keep Local
 
@@ -22,6 +24,8 @@ Extract packages only when the boundary is stable and useful across multiple sit
 - case-study-specific metadata
 - legacy redirect maps
 - exact Cloudflare project/account names
+- editorial topic catalog choices
+- provider-specific newsletter or analytics behavior
 
 ## Separation Rules
 
@@ -30,6 +34,8 @@ Extract packages only when the boundary is stable and useful across multiple sit
 - Prefer protocols where site policy must vary.
 - Keep deterministic behavior in packages; keep editorial choices in site code.
 - Add package-level tests before depending on a package from multiple sites.
+- Do not let reusable packages become a second static-site framework. Each
+  package should own one concern and remain optional.
 
 ## Starter Templates
 

@@ -25,6 +25,8 @@ Use a deterministic build-time image pipeline for local assets.
 - Generate same-format JPEG/PNG derivatives unless encoder support is confirmed.
 - Add `srcset` and `sizes` only for derivatives that exist.
 - Cache generated derivatives aggressively when deployed with stable filenames.
+- Keep generated image directories out of Saga watch triggers, or the image
+  pipeline can cause rebuild loops.
 
 ## Audits
 
@@ -34,6 +36,7 @@ Report:
 - missing local files
 - unreadable dimensions
 - oversized originals
+- deployed image weight by directory and file type
 - body images without dimensions
 - posts without social images
 

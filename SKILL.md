@@ -32,6 +32,7 @@ Use this skill to operate a Swift Saga website as a coherent system: Saga pipeli
 ## Reference Routing
 
 - Read `references/saga-architecture.md` for pipeline design and build modes.
+- Read `references/lessons-from-history.md` when starting a new site, migration, or major refactor; it records the hard-won decisions from `deverman-saga-site`.
 - Read `references/package-operating-system.md` before adding, removing, or generalizing packages.
 - Read `references/site-structure.md` for project layout and source organization.
 - Read `references/content-and-seo.md` for metadata, URLs, feeds, sitemap, JSON-LD, and WordPress preservation.

@@ -33,13 +33,18 @@ Styles/
 ## Rules
 
 - Compile with SwiftTailwind in Saga `beforeRead`.
-- Write to a temporary file first and replace generated CSS only after valid output exists.
+- Write to a temporary file first and replace generated CSS only after valid,
+  non-empty output exists. This protects the public stylesheet when the Tailwind
+  process emits diagnostics but the wrapper does not throw.
 - Use `Saga.hashed("/static/style.css")` in layout.
 - Use `@theme` for tokens.
 - Put reusable classes in `@layer components`.
 - Classes that appear only in Swift strings or raw Markdown HTML must not rely on
   Tailwind content scanning alone.
 - Keep modules small enough for focused edits.
+- Exclude `Styles` from SwiftPM source handling.
+- Restart `saga dev` after Swift source changes so new renderer strings and
+  static-copy behavior come from the current binary.
 - Add tests for import existence, module size, balanced comments/braces, and clean compilation.
 
 ## Style Guide

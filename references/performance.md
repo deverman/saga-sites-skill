@@ -35,6 +35,18 @@ summary.
 - Ignore generated image directories in Saga watch mode to prevent rebuild loops.
 - Measure deploy payload size before optimizing source assets.
 
+## Repository Size
+
+- Generated `deploy/` history can dominate repository size. If a site previously
+  committed deploy output, remove it from the current tree first, then plan a
+  coordinated history rewrite only when collaborators are ready to reclone or
+  reset.
+- Treat imported `content/wp-content/uploads/` differently from `deploy/`.
+  Source media may be required for legacy URL preservation and should not be
+  purged by the same cleanup rule.
+- Keep size audit commands in repo docs or SiteDoctor reports so future changes
+  can compare `.git`, `content/`, `deploy/`, and image weight over time.
+
 ## Browser Performance
 
 - Remove avoidable JavaScript. Prefer server-rendered navigation, archives, and

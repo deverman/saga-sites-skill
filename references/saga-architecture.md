@@ -12,10 +12,14 @@ runtime JavaScript or request-time functions.
 - Use `itemWriter` for detail pages, `listWriter` for indexes and pagination,
   `tagWriter` and `partitionedWriter` for archives, and `createPage` for
   generated files such as sitemap, redirects, robots, and 404.
+- When a dynamic writer owns a path like `/writing/`, register the matching
+  Markdown page with no direct writer so the content is available to the list
+  renderer without creating duplicate output.
 - Use `beforeRead` for generated inputs, such as Tailwind CSS compilation.
 - Use `postProcess` for production-only output changes, such as Bonsai HTML
   minification.
-- Use `afterWrite` for deterministic cleanup, aliases, metrics, and reports.
+- Use `afterWrite` for deterministic cleanup, aliases, metrics, reports, and
+  duplicate page-one pagination cleanup.
 
 ## Build Modes
 
@@ -30,6 +34,8 @@ runtime JavaScript or request-time functions.
 - Keep one executable target so Saga CLI does not face ambiguous SwiftPM products.
 - Put reusable build logic in a library target so Swift Testing can cover it.
 - Avoid running commands that write the same output directory concurrently.
+- Restart `saga dev` after Swift source changes; the dev server keeps using the
+  binary it launched with until restarted.
 
 ## Upstream Research
 

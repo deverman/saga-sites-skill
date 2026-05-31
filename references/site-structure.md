@@ -37,6 +37,8 @@ content/
   are truly dynamic.
 - Put source CSS under `Sources/.../Styles` and exclude that directory from
   SwiftPM source handling.
+- Split renderer files by page family when source size starts slowing review or
+  agent context loading. Prefer small, named files over one large theme file.
 
 ## Content Rules
 
@@ -53,3 +55,5 @@ content/
   and deployment cautions.
 - Keep a style-guide page in the site when building a reusable theme.
 - Update examples whenever CSS classes or raw Markdown components change.
+- Keep repo-only planning and audits outside downstream site repos once they
+  become reusable skill collateral.

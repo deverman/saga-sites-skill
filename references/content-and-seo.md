@@ -26,6 +26,8 @@ categories: engineering
 - Visible Markdown H1s may use typographic quotes or emphasis.
 - `description:` feeds SEO metadata, archives, and reports.
 - `image:` feeds Open Graph, Twitter, feeds, and image audits.
+- `published:` should default to public when omitted; drafts must be filtered
+  consistently from pages, feeds, sitemaps, archives, and recommendations.
 
 ## SEO Contract
 
@@ -42,6 +44,19 @@ Centralize:
 - feed title policy
 
 Use `JSONEncoder` for JSON-LD. Do not interpolate JSON strings by hand.
+Use the same title resolver for HTML metadata, Atom, JSON Feed, JSON-LD, and
+archive rows so Markdown emphasis markers never leak into plain-text surfaces.
+
+## Generated Output Checks
+
+Smoke-check generated HTML for:
+
+- exactly one canonical link
+- parseable JSON-LD
+- expected robots policy
+- sitemap inclusion or exclusion
+- feed entries using `seoTitle:` when present
+- no duplicate page-one archive URL such as `/writing/page/1/`
 
 ## Archives
 
@@ -57,3 +72,5 @@ Use `JSONEncoder` for JSON-LD. Do not interpolate JSON strings by hand.
   external storage are explicitly designed.
 - Use WordPress-compatible taxonomy slug logic for migrated archives.
 - Generate redirects for historical paths that cannot remain one-to-one.
+- Treat media URLs as SEO assets too. Old image URLs may have inbound value and
+  should not be removed just because responsive derivatives exist.
