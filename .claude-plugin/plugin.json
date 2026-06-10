@@ -1,0 +1,12 @@
+{
+  "name": "saga-sites",
+  "description": "Build fast, structured Swift Saga websites with typed content, SEO, Tailwind, audits, and Cloudflare Pages or GitHub Pages deployment",
+  "version": "1.0.0",
+  "author": {
+    "name": "Brent Deverman"
+  },
+  "homepage": "https://github.com/deverman/saga-sites-skill",
+  "repository": "https://github.com/deverman/saga-sites-skill",
+  "license": "MIT",
+  "skills": "./skills"
+}

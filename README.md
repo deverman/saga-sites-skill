@@ -6,26 +6,21 @@ Covers the full Saga workflow: pipeline design, typed Markdown metadata, Tailwin
 
 ## Install
 
-### Install with the Claude Code CLI
+Installing a skill is a two-step process: first add this repository as a **marketplace**, then install the skill from it.
 
-```bash
-claude plugin install https://github.com/deverman/saga-sites-skill
+### Step 1 — Add the marketplace
+
+```
+/plugin marketplace add deverman/saga-sites-skill
 ```
 
-### Install via Claude Code settings
+### Step 2 — Install the skill
 
-1. Open Claude Code.
-2. Run `/config` and open **Settings**.
-3. Go to **Plugins** → **Add plugin**.
-4. Enter the repository URL:
+```
+/plugin install saga-sites@saga-sites-skill
+```
 
-   ```
-   https://github.com/deverman/saga-sites-skill
-   ```
-
-5. Confirm the install.
-
-### Verify the install
+### Verify
 
 After installing, type `/saga-sites` in any Claude Code prompt. The skill will activate and confirm it is ready.
 
@@ -44,12 +39,14 @@ Example prompts:
 
 | Path | Purpose |
 |---|---|
-| `SKILL.md` | Skill prompt loaded by agents |
+| `.claude-plugin/marketplace.json` | Marketplace manifest |
+| `.claude-plugin/plugin.json` | Plugin manifest |
+| `skills/saga-sites/SKILL.md` | Skill prompt loaded by agents |
 | `agents/openai.yaml` | Display name and interface metadata |
-| `references/` | Domain knowledge documents (routing in `SKILL.md`) |
+| `references/` | Domain knowledge documents (routed from the skill) |
 | `assets/templates/minimal-site/` | Copyable Saga starter (two-target Swift package) |
 | `assets/templates/*/README.md` | Blog, landing page, case study, and WordPress migration starting points |
-| `assets/tools/skill-validator/` | Swift CLI that validates `SKILL.md` front matter |
+| `assets/tools/skill-validator/` | Swift CLI that validates skill front matter |
 
 ## Related Skills
 

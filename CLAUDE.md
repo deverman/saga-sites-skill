@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is the **`saga-sites` Codex skill** — a skill definition and asset library that teaches AI agents how to build, maintain, and deploy Swift [Saga](https://github.com/loopwerk/Saga) static sites. It is not itself a Saga site.
 
-The skill is defined in `SKILL.md` (the skill prompt) and `agents/openai.yaml` (interface metadata). The `references/` directory contains the domain knowledge the skill draws on. The `assets/` directory contains copyable site templates and Swift tooling.
+The skill is defined in `skills/saga-sites/SKILL.md` (the skill prompt), `.claude-plugin/` (marketplace and plugin manifests), and `agents/openai.yaml` (interface metadata). The `references/` directory contains the domain knowledge the skill draws on. The `assets/` directory contains copyable site templates and Swift tooling.
 
 ## Commands
 
@@ -33,7 +33,12 @@ swift run ExampleSagaSite deploy --project-name your-pages-project --dry-run
 ## Architecture
 
 ```
-SKILL.md                        # The skill prompt loaded by agents
+.claude-plugin/
+  marketplace.json              # Marketplace manifest (required for `plugin marketplace add`)
+  plugin.json                   # Plugin manifest (name, version, skills path)
+skills/
+  saga-sites/
+    SKILL.md                    # The skill prompt loaded by agents
 agents/openai.yaml              # Display name, short description, default prompt
 references/                     # Domain knowledge documents (read by the skill at runtime)
 assets/
@@ -56,7 +61,7 @@ docs/                           # Planning and audit docs (not loaded by agents)
 
 ### Modifying the skill
 
-- Edit `SKILL.md` to change operating rules, reference routing, or first-move guidance.
+- Edit `skills/saga-sites/SKILL.md` to change operating rules, reference routing, or first-move guidance.
 - Edit files under `references/` to update domain knowledge without touching the skill prompt.
 - After adding a new reference file, add a routing entry in the `## Reference Routing` section of `SKILL.md`.
 - `assets/templates/minimal-site/` is the reference implementation; keep it consistent with `references/site-structure.md` and `references/saga-architecture.md`.

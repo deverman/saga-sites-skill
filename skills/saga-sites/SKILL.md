@@ -32,18 +32,18 @@ Use this skill to operate a Swift Saga website as a coherent system: Saga pipeli
 
 ## Reference Routing
 
-- Read `references/saga-architecture.md` for pipeline design and build modes.
-- Read `references/lessons-from-history.md` when starting a new site, migration, or major refactor; it records the hard-won decisions from `deverman-saga-site`.
-- Read `references/package-operating-system.md` before adding, removing, or generalizing packages.
-- Read `references/site-structure.md` for project layout and source organization.
-- Read `references/content-and-seo.md` for metadata, URLs, feeds, sitemap, JSON-LD, and WordPress preservation.
-- Read `references/design-and-tailwind.md` for theme and CSS work.
-- Read `references/performance.md` for archive strategy, metrics, and generated output.
-- Read `references/images.md` for image audits and responsive derivatives.
-- Read `references/site-doctor.md` for audits, reports, and AI proposal flows.
-- Read `references/deployment.md` for Cloudflare Pages deploy CLI patterns.
-- Read `references/migration-playbook.md` for WordPress conversions.
-- Read `references/reusable-packages.md` before extracting shared packages or plugins.
+- Read `../../references/saga-architecture.md` for pipeline design and build modes.
+- Read `../../references/lessons-from-history.md` when starting a new site, migration, or major refactor; it records the hard-won decisions from `deverman-saga-site`.
+- Read `../../references/package-operating-system.md` before adding, removing, or generalizing packages.
+- Read `../../references/site-structure.md` for project layout and source organization.
+- Read `../../references/content-and-seo.md` for metadata, URLs, feeds, sitemap, JSON-LD, and WordPress preservation.
+- Read `../../references/design-and-tailwind.md` for theme and CSS work.
+- Read `../../references/performance.md` for archive strategy, metrics, and generated output.
+- Read `../../references/images.md` for image audits and responsive derivatives.
+- Read `../../references/site-doctor.md` for audits, reports, and AI proposal flows.
+- Read `../../references/deployment.md` for Cloudflare Pages deploy CLI patterns.
+- Read `../../references/migration-playbook.md` for WordPress conversions.
+- Read `../../references/reusable-packages.md` before extracting shared packages or plugins.
 
 ## Adjacent Skills
 
@@ -56,7 +56,7 @@ Use this skill to operate a Swift Saga website as a coherent system: Saga pipeli
 
 ## Assets And Swift Utilities
 
-- `assets/templates/minimal-site/` is the copyable Saga starter/reference site; read its `TEMPLATE.md` before adapting it.
-- `assets/templates/*/README.md` files describe landing-page, blog, case-study, and WordPress migration starting points.
-- `assets/tools/skill-validator/` is a Swift ArgumentParser replacement for `quick_validate.py`.
+- `../../assets/templates/minimal-site/` is the copyable Saga starter/reference site; read its `TEMPLATE.md` before adapting it.
+- `../../assets/templates/*/README.md` files describe landing-page, blog, case-study, and WordPress migration starting points.
+- `../../assets/tools/skill-validator/` is a Swift ArgumentParser replacement for `quick_validate.py`.
 - Deterministic utilities for Saga sites should be implemented as Swift packages or Swift ArgumentParser commands, not Python helper scripts.

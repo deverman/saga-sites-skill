@@ -1,0 +1,19 @@
+{
+  "name": "saga-sites-skill",
+  "owner": {
+    "name": "Brent Deverman",
+    "url": "https://deverman.org"
+  },
+  "metadata": {
+    "description": "Build, design, migrate, maintain, and deploy Swift Saga static sites",
+    "version": "1.0.0",
+    "repository": "https://github.com/deverman/saga-sites-skill"
+  },
+  "plugins": [
+    {
+      "name": "saga-sites",
+      "description": "Build fast, structured Swift Saga websites with typed content, SEO, Tailwind, audits, and Cloudflare Pages or GitHub Pages deployment",
+      "source": "./"
+    }
+  ]
+}
