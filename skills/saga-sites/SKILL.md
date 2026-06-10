@@ -1,6 +1,8 @@
 ---
 name: saga-sites
 description: Build, design, migrate, maintain, optimize, audit, or deploy Swift Saga static sites. Use for Saga landing pages, blogs, case-study/portfolio sites, WordPress migrations, typed Markdown metadata, SEO contracts, Tailwind/SwiftTailwind styling, responsive image pipelines, SiteDoctor-style audits, Swift ArgumentParser site CLIs, build performance, full archive generation, and Cloudflare Pages Direct Upload workflows.
+metadata:
+  version: 1.0.0
 ---
 
 # Saga Sites
