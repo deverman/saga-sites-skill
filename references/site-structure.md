@@ -46,8 +46,12 @@ content/
 - `content/posts` holds posts and imported WordPress entries.
 - `content/static` holds deployable static assets and generated CSS.
 - `content/static/generated` is intermediate output; do not hand-edit it.
-- `deploy` is generated output for local builds/uploads and should usually not
-  be tracked.
+- `deploy` is generated output for Cloudflare Pages Direct Upload and should
+  usually not be tracked.
+- `docs` is an alternative output directory used when deploying via GitHub Pages
+  (configured in `Package.swift` as `output: "docs"`). Like `deploy`, it should
+  be tracked only when GitHub Pages requires it — keep it out of `.gitignore` in
+  that case and treat it as a build artifact that is committed deliberately.
 
 ## Documentation Rules
 

@@ -27,7 +27,8 @@ Use this skill to operate a Swift Saga website as a coherent system: Saga pipeli
 - Transform rendered HTML with a parser such as SwiftSoup. Avoid regex over Markdown for HTML rewrites.
 - Keep generated output and derivatives deterministic; ignore generated files in watch mode.
 - Keep AI/content suggestions in SiteDoctor-style proposal commands; never make `saga build` nondeterministic.
-- Never run `saga build`, a no-subcommand Swift site run, or deploy while `saga dev` is active if they share `deploy/`.
+- Never run `saga build`, a no-subcommand Swift site run, or deploy while `saga dev` is active if they share the output directory (`deploy/` for Cloudflare Pages, `docs/` for GitHub Pages).
+- GitHub Pages sites output to `docs/` and commit that directory; Cloudflare Pages sites output to `deploy/` and should gitignore it.
 
 ## Reference Routing
 
